@@ -1,0 +1,34 @@
+@Test(dataProviderClass = TestDataProvider.class, dataProvider = "Nplate", priority = 1)
+
+try
+{
+String userName = table.get(Constants.USERNAME);
+String password = table.get(Constants.PASSWORD);
+String plateletcount = table.get(Constants.PLATELETCOUNT);
+
+configDriverWithReport(m, "eSirius project Description", "");//Configuring Mobile Driver
+String deviceName = URLReader.getDeviceName("eSirius");
+launchApplication(prop.getProperty("deviceType"), deviceName, prop.getProperty("appType"), prop.getProperty("appName"), "", "");	//Launching Application
+
+}
+
+
+//IF CONDITION
+if(client.isElementFound("NATIVE", "xpath=//*[@text='Login to Nplate']", 0))
+{
+Thread.sleep(2000);
+report.updateTestLog("Verify Onboarding Screen","Onboarding Screen is displayed", Status.PASS);
+}
+else 
+{
+Thread.sleep(2000);
+report.updateTestLog("Verify Onboarding Screen","Onboarding Screen is not displayed", Status.FAIL);
+}
+
+//
+
+client.click("NATIVE", "xpath=//*[@text='Login to Nplate']", 0, 1);
+client.click("NATIVE", "xpath=//*[@placeholder='Enter your email address']", 0, 1);
+client.sendText(userName);
+client.click("NATIVE", "xpath=//*[@placeholder='Enter your password']", 0, 1);
+client.sendText(password);

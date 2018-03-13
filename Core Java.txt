@@ -1,0 +1,56 @@
+How JAVA Works:
+
+1.Convert the Source File to Byte Code using Compiler - javac
+             SF(.java)---Compiler---> BC(.class) 
+
+2.Run the Byte Code in Platform(JVM) - java
+            BC ---JVM---> Object               
+
+
+**************************************************************
+CLASS AND OBJECT:
+
+Example: Class is Blueprint and Object is Building
+
+Class A 
+{ 
+int i;
+show()
+{
+sysout();
+}
+
+A obj = new A();
+Obj.show();
+
+A =Class name
+Obj=Reference
+new = Keyword (memory/space)
+A() =default Constuctor(How much memory?)
+
+*************************************************************
+CONSTRUCTOR:
+
+Member Method
+Has same name as class name
+Return Nothing
+Allocate Memmory
+
+*************************************************************
+STRING:
+
+	String A1 = "Kahaf  ";
+	String A2 = "NABEEL";
+	String A3 = "Nabeel";
+
+System.out.println("combine  "  +A1.concat(A2));	
+System.out.println("length  "  +A1.length()); 
+System.out.println("compare  "  +A2.equals(A3));
+System.out.println("compare "  +A2.equalsIgnoreCase(A3));
+
+OUTPUT: 
+combine  Kahaf  NABEEL
+length  7
+compare  false
+compare true
+	

@@ -1,0 +1,112 @@
+Webdiver - API
+
+DRIVER INITIATION:
+***************************************
+1.Set Path
+System.setPropert("driver","path") 
+System.getProperty(“webdriver.gecko.driver”,”c://geckodriver.exe”);
+System.getProperty(“webdriver.chrome.driver”,”c://chromedriver.exe”);
+System.getProperty(“webdriver.ie.driver”,”c://IEDriverServer.exe”);
+
+or
+
+EnvirmentVariables -> System Variable 
+->New(1.Name:DRIVER_PATH and Value:path of the driver)
+->Path add (%DRIVER_PATH%;)
+
+2.Initiate Driver
+WebDriver driver = new FirefoxDriver();
+
+***************************************
+
+driver.get("");
+driver.manage().window().maximize();
+
+driver.getTitle();
+driver.CurrentUrl();
+
+diver.getText();
+
+driver.close();
+diver.quit();
+
+
+*****************************************
+Xpath:
+
+TABLE:
+//table/tbody/tr[2]/td[2]
+
+
+BASIC:
+Xpath = //tagname[@attribute ='value'];
+
+
+/****find element with partial text****/
+CONTAINS(): - 
+Xpath = //*[contains(@att , 'value')]
+
+/****find the element whose attribute changes dynamically****/
+STARTS WITH():
+Xpath = //tagname[starts-with(@id,'message')]
+
+/****find the element with exact text match****/
+TEXT():
+Xpath=//tagname[text()='UserID']
+
+
+OR & AND:
+Xpath = //*[@att1='valu1' OR @att2='valu2']
+Xpath = //*[@att1='valu1' AND @att2='valu2'] - both true
+
+Xpath = //*[contains(@att , 'value') OR @att2='valu2']
+
+/****find the complex or dynamic elements****/
+XPath axes methods:
+
+1.following - next following sibling
+Xpath=//*[@att='value']//following::input[1]
+
+2.Ancestor - parent or grandparents
+Xpath=//*[text()='value']//ancestor::div
+
+
+3.Child - select all children of current node
+Xpath=//*[@id='value']/child::li
+
+4.preceding - select all before current node
+Xpath=//*[@type='value']//preceding::input
+
+5.Following-sibling:
+
+6.Parent :
+
+
+Xpath=//input[@type='text']
+Xpath= //label[@id='message23']
+Xpath= //input[@value='RESET']
+Xpath=//*[@class='barone']
+Xpath=//a[@href='http://demo.guru99.com/']
+Xpath= //img[@src='//cdn.guru99.com/images/home/java.png']
+
+
+
+***************************************
+IMPLICIT & EXPLICIT WAIT:
+
+Syntax : 
+
+driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+WebDriverWait wait = new WebDriverWait(driver, 10);
+WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("elementId")));
+
+***************************************
+INPUT BOX:
+.sendKeys
+.clear
+
+RADIO BUTTON /CHECK BOX /LINK:
+.click
+
+DROPDOWN:

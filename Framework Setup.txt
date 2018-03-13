@@ -1,0 +1,29 @@
+Script:
+
+1.@Test Line -> dataProvider=Data_table_name(Sheet name.xls)
+
+2.Check run mode line -> constant.(Declared Data_table_name)
+
+3.String deviceName line -> (Data_table_name)
+
+
+Constant:
+
+1.Data_table_name declaration
+
+
+Test data provider:
+
+1.Data_table_name
+2.constant.(Declared Data_table_name)
+
+
+Data_table_name.xls(File)
+1.TestCase name=Method name in TC
+
+Suit.xls(File)
+1.Suit name = Data_table_name
+
+
+Proj.properties
+appName=URL

@@ -1,0 +1,23 @@
+Configuration Local:
+ 
+1.Download apache maven
+2.Download Binary zip
+3.Add Maven_Home (folder open path) and Povide bin path
+4.Check mvn -version
+
+Configuation Eclipse:
+
+1.New -> Project -> Maven -> Maven Project ->create a simple project(check)
+
+
+POM:
+1.Under pom add dependecy -> search (Maven XXX dependency) and add 
+
+
+Lifecycle:
+1.Comipler - To compile source code
+2.Surefire - To excute the TC n  configue TestNG(if using)
+3.Resource - To generate (jar/war/ear)
+
+mvn -clean install
+mvn test

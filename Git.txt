@@ -1,0 +1,46 @@
+GitHub(Code hosting plaform ,central remote repository )
+Git(Version Control tool) 
+
+-Commit(local) and Push(Central)
+-Update(local) and Pull(Central)
+
+-Branches - local and Remote tracking branches
+-Merging
+
+Git Commands:
+
+1.Creating Repositories in local:
+-git init
+
+2.syncing repositories
+-git remote add origin "remote url"
+-git pull origin xxx(branch)
+-git push origin xxx(branch)
+
+
+3.Making Changes:
+-git status
+-git add xxx.ext(filename.extension)
+-git add -A
+-git commit -m "xxx"(message)
+-git commit -a -m "xxx"
+
+
+4.Parallel Development
+
+branch
+-git branch xxx(branch_name)
+-git checkout xxx(branch_name)
+
+merge
+-git merge xxx(branch_name)
+
+rebase
+-git rebase
+
+
+
+git log
+git clone
+ls
+cat xxx.ext 

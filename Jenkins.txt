@@ -1,0 +1,33 @@
+jenkins:
+kahaf
+June@2017
+
+
+
+Local:
+C:\Users\User\Jenkins
+
+
+War:
+G:\Jenkins
+
+
+
+
+
+cd/
+
+java -jarr jenkins.war 
+
+http://localhost.8080
+
+manage jenkins -> Config System -> Home Dir(Plugin , logs etc)
+
+manage jenkins -> Config System -> Home Dir 
+Go to home dir folder , Inside jenkins home ,Inside Folder secrets ,File Initial Admin pwd
+
+manage jenkins -> manage user 
+Create user
+
+manage jenkins -> Config System -> # of executors(parallel jobs)
+
